@@ -30,6 +30,9 @@
 }
 
 @media screen and (max-width: 670px){
+  .body{
+    overflow-x: scroll;
+  }
   .blue-stripe{
     width: calc(100vw - 50px) !important;
     left: 0;
@@ -38,6 +41,7 @@
     width: 100vw !important;
     margin-left: 0 !important;
     margin-bottom: 0 !important;
+    overflow-x: scroll !important;
   }
   .link-box > p{
     margin-right: 30px;
@@ -53,6 +57,7 @@ body{
   color: white;
   margin:0;
   overflow: hidden;
+  
 }
 .big-title{
   font-family: "Fira Mono";
