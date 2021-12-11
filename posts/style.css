@@ -41,6 +41,7 @@
     width: 100vw !important;
     margin-left: 0 !important;
     margin-bottom: 0 !important;
+    overflow-x: scroll !important;
   }
 
 }
