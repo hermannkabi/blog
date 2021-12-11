@@ -1,0 +1,151 @@
+@media screen and (max-width: 1600px) {
+  .white-stripe{
+    right: 200px !important;
+  }
+}
+
+@media screen and (max-width:1200px){
+  .white-stripe{
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 900px){
+  .blue-stripe{
+    width: calc(100vw - 50px) !important;
+    right: 0;
+    margin-left: 50px !important;
+
+  }
+  .big-title{
+    margin-left: 50px !important;
+  }
+  .update{
+    margin-left: 50px !important;
+  }
+  .link-box{
+    margin-left: 50px !important;
+    margin-bottom: 0 !important;
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+@media screen and (max-width: 670px){
+  .blue-stripe{
+    width: calc(100vw - 50px) !important;
+    left: 0;
+  }
+  .link-box{
+    width: 100vw !important;
+    margin-left: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+}
+
+body{
+  height: 100vh;
+  width: 100vw;
+  background-color: #393e46;
+  color: white;
+  margin:0;
+  overflow: hidden;
+}
+.big-title{
+  font-family: "Fira Mono";
+  font-size: 36px;
+  margin: 120px 20px 10px 90px;
+}
+.blue-stripe{
+  background-color: #00adb5;
+  height: 35px;
+  width: 700px;
+  margin-left: 90px;
+}
+.white-stripe{
+  background-color: white;
+  height: 500px;
+  width: 45px;
+  position: absolute;
+  bottom: 0;
+  right: 420px;
+}
+.wrapper{
+  height: 100%;
+  width: 100%;
+}
+.link-box{
+  background-color: #222831;
+  margin-left: 90px;
+  height: 600px;
+  width: 800px;
+  margin-top: calc(310px - 159px);
+  margin-bottom: 0;
+  overflow: auto;
+  position: absolute;
+  bottom: 0;
+  font-family: "Fira Mono";
+  font-size: 1rem;
+  padding: 20px;
+}
+.link{
+  margin: 27px 45px;
+  margin-left: 45px;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  font-family: "Fira Mono";
+  font-size: 30px;
+}
+
+.link:hover{
+  text-decoration: underline 6px #F5EEDC;
+}
+
+.bottom{
+  position: fixed;
+  bottom: 10px;
+}
+.update{
+  font-family: "Fira Mono";
+  font-size: 1.5rem;
+  margin: 15px 20px 20px 90px;
+}
+.project-text{
+  margin: 10px;
+  margin-left: 45px;
+  font-family: "Fira Mono";
+  font-size: 1rem;
+}
+.inline{
+  display: inline;
+}
+.float-right{
+  margin: 10px;
+  font-family: "Fira Mono";
+}
+input, textarea{
+  margin: 50px 10px 10px 30px;
+  font-family: "Fira Mono", sans-serif;
+  font-size: 1rem;
+  border: 0px solid transparent;
+  border-radius: 0;
+  background-color: #E8E1D9;
+  padding: 15px 30px;
+  min-width: 250px;
+}
+button{
+  cursor: pointer;
+  margin: 0 10px 30px 30px;
+  background-color: #2FDD92;
+  color: #1E5128;
+  border: 1px solid rgb(0, 255, 0);
+  height: 50px;
+  font-family: "Fira Mono", sans-serif;
+  font-size: 1.2rem;
+  width: 300px;
+}
+#temp-post > p{
+  font-size: 20px;
+}
