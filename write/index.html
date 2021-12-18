@@ -12,14 +12,18 @@
   </head>
   <body>
     <div class="wrapper">
-      <input class="title" style="margin-left: 90px; margin-top: 70px" type="text" name="" id="" placeholder="PEALKIRI">
+      <input class="title" style="margin-left: 90px; margin-top: 70px" spellcheck="false" type="text" name="" id="" placeholder="PEALKIRI">
       <div class="blue-stripe"></div>
       <div class="link-box" >
-        <textarea class="post-writer" name="" id="" cols="60" rows="15" placeholder="Kirjuta postitus, kasuta Markdowni"></textarea>
+        <textarea class="post-writer" spellcheck="false" name="" id="" cols="60" rows="15" placeholder="Kirjuta postitus, kasuta Markdowni"></textarea>
         <button class="preview">EELVAADE</button>
-        <button class="publish">AVALDA</button>
+        <button class="draft">SALVESTA MUSTAND</button>
+        <button style="width: 650px;" class="publish">AVALDA</button>
       </div>
       <div class="white-stripe"></div>
+    </div>
+    <div class="mobile-error" hidden>
+      <h1 class="error-title">Writing blog posts on mobile is not supported!</h1>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js" integrity="sha512-L03kznCrNOfVxOUovR6ESfCz9Gfny7gihUX/huVbQB9zjODtYpxaVtIaAkpetoiyV2eqWbvxMH9fiSv5enX7bw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> 

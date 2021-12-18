@@ -132,6 +132,7 @@ input, textarea{
   background-color: #E8E1D9;
   padding: 15px 30px;
   min-width: 250px;
+
 }
 button{
   cursor: pointer;
@@ -146,4 +147,19 @@ button{
 }
 #temp-post > p{
   font-size: 20px;
+}
+.mobile-error{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+.error-title{
+  text-align: center;
+  font-family: "Fira Mono", sans-serif;
+  font-size: 1rem;
+}
+.title{
+  width: 500px;
 }
