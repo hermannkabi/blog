@@ -57,7 +57,7 @@ async function setPost(title, body){
     await setDoc(doc(db, "posts", id), {
       title: title,
       body: body,
-      timeToRead: 2,
+      timeToRead: Math.ceil(body.length / 1250),
       date: date,
       postId: id,
     });
@@ -70,7 +70,7 @@ async function saveAsDraft(title, body){
     await updateDoc(doc(db, "drafts", id), {
       title: title,
       body: body,
-      timeToRead: 2,
+      timeToRead: 0,
       date: date,
       postId: id,
     });
