@@ -49,7 +49,7 @@ async function loadPost(){
   }
 }
 
-if(id) loadPost();
+
 
 async function setPost(title, body){
     var date = Date.now();
@@ -134,3 +134,17 @@ $(window).resize(function (){
 
 //This is needed to check the size when the page loads, as resize is not called
 checkForScreenSize();
+
+function checkPassword(){
+  $("body").css("pointer-events", "none");
+  var passwordEntered = prompt("Salasõna");
+  if(passwordEntered == "hermann"){
+    $("body").css("pointer-events", "auto");
+
+    if(id) loadPost();
+  }else {
+    checkPassword();
+  }
+}
+
+checkPassword();
