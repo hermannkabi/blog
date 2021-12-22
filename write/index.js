@@ -131,6 +131,10 @@ $(window).resize(function (){
 });
 
 
+//TODO: Add multi-language support
+//TODO: Ability to delete drafts
+
+
 
 //This is needed to check the size when the page loads, as resize is not called
 checkForScreenSize();

@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js";
-import { getFirestore, getDocs, collection, query, orderBy } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore.js";
+import { getFirestore, deleteDoc, doc, getDocs, collection, query, orderBy } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore.js";
 const firebaseConfig = {
   apiKey: "AIzaSyCHExhBICb909d7nRAb9R3Ce0HtZNNZGrw",
   authDomain: "notes-hermannkabi.firebaseapp.com",
@@ -13,9 +13,16 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
+async function deleteDraft(draftId){
+  var post = doc(db, "drafts", draftId);
+  await deleteDoc(post);
+  await getBlogPosts();
+}
+
+
 async function getBlogPosts(){
   var posts = await getDocs(query(collection(db, "drafts")), orderBy("date", "desc"));
-
+  $(".posts").empty();
   posts.forEach((doc) => {
     var data = doc.data();
     var title = data.title;
@@ -33,6 +40,8 @@ async function getBlogPosts(){
     <p class="project-text inline">`+timeToRead+` MIN READ</p>
     <p class="inline">•</p>
     <p class="float-right inline">`+formattedDate+`</p>
+    <a id=`+data.postId+` class="link float-right inline delete-link" style="color:red; font-size: 16px">Delete</a>
+
     <br><br><br>
     
     </div>
@@ -41,8 +50,16 @@ async function getBlogPosts(){
     $(".posts").append(postTemplate);
     
   });
+  $(".delete-link").click(function (){
+    var postId = $(this).attr("id");
+    if(confirm("Are you sure you want to delete this post?")){
+      deleteDraft(postId);
+    }
+  });
 
 }
+
+
 
 
 
@@ -53,6 +70,9 @@ function checkPassword(){
   var passwordEntered = prompt("Salasõna");
   if(passwordEntered == "hermann"){
     getBlogPosts();
+
+    
+
   }else {
     checkPassword();
   }

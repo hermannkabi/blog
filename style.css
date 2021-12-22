@@ -92,6 +92,7 @@ body{
   text-decoration: none;
   font-family: "Fira Mono";
   font-size: 30px;
+  cursor: pointer;
 }
 
 .link:hover{
